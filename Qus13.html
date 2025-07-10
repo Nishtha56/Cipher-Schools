@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Card Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 30px 15px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      color: #007bff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+      }
+
+      .card p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive & Stylish Cards</h1>
+
+  <div class="container">
+    <div class="card">
+      <h2>Learn HTML</h2>
+      <p>Understand the structure of web pages and build content using semantic tags.</p>
+    </div>
+    <div class="card">
+      <h2>Style with CSS</h2>
+      <p>Enhance your pages with colors, layouts, animations, and responsive design.</p>
+    </div>
+    <div class="card">
+      <h2>Power of JavaScript</h2>
+      <p>Add interactivity to the websites, handle events, and manipulate the DOM.</p>
+    </div>
+  </div>
+
+</body>
+</html>
